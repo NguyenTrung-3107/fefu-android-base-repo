@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Activity Tracker</string>
+    <string name="app_name">ActivityApplication</string>
+    <string name="welcome_name_1">Пожалуй, лучший фитнес трекер в ДВФУ</string>
+    <string name="welcome_name_2">Созданный студентами 2-ого курса</string>
+    <string name="welcome_name_3">Зарегистрироваться</string>
+    <string name="welcome_name_4">Уже есть аккаунт?</string>
+    <string name="regis_name_1">Регистрация</string>
+    <string name="regis_name_2">Логин</string>
+    <string name="regis_name_3">Имя или никнейм</string>
+    <string name="regis_name_4">Пароль</string>
+    <string name="regis_name_5">Повторите пароль</string>
+    <string name="regis_name_6">Нажимая на кнопку, вы соглашаетесь \n с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
+    <string name="regis_radio_name_1">Пол</string>
+    <string name="regis_radio_name_2">Мужской</string>
+    <string name="regis_radio_name_3">Женский</string>
+    <string name="regis_radio_name_4">Другое</string>
+    <string name="login_name_1">Вход</string>
+    <string name="login_name_2">Войти</string>
+    <string name="splash_name">A C T I V I T Y</string>
 </resources>

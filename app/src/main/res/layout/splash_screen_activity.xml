@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/logo_img"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginRight="176dp"
+        android:src="@drawable/ic_logo_below"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/logo_img_2"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginRight="176dp"
+        android:src="@drawable/ic_logo_above"
+        android:layout_width="60dp"
+        android:layout_height="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_img_2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="140dp"
+        android:text="@string/splash_name"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

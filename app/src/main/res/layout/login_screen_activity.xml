@@ -39,10 +39,11 @@
                 android:src="@drawable/ic_screen_bicycles" />
 
             <com.google.android.material.textfield.TextInputLayout
+                app:errorEnabled="true"
                 android:id="@+id/input_login_1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_below="@id/login_image"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -61,10 +62,11 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                app:errorEnabled="true"
                 android:id="@+id/input_login_2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_below="@id/input_login_1"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"

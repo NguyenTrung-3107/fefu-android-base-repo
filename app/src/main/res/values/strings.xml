@@ -24,4 +24,16 @@
     <string name="other_activity">Other Tracking Fragment</string>
     <string name="menu_action">Активность</string>
     <string name="menu_profile">Профиль</string>
+    <string name="my_detail_toolbar_title">Toolbar</string>
+    <string name="date_label">Date</string>
+    <string name="my_detail_start">Start</string>
+    <string name="my_detail_finish">Finish</string>
+    <string name="my_detail_divide">|</string>
+    <string name="my_detail_start_time">Start</string>
+    <string name="my_detail_finish_time">Finish</string>
+    <string name="my_detail_edit_comment">Comment</string>
+    <string name="my_detail_duration">Duration</string>
+    <string name="my_detail_distance">Distance</string>
+    <string name="my_item_activity_type">Activity Type</string>
+    <string name="user_detail">User</string>
 </resources>

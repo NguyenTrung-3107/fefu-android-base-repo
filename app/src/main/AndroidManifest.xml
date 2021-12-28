@@ -13,11 +13,6 @@
         <activity android:name=".WelcomeScreen"
             android:label="Activity"
             android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-
         </activity>
 
         <activity android:name=".RegisterScreen"
@@ -30,7 +25,10 @@
             android:exported="true">
         </activity>
 
-
+        <activity android:name=".TrackerActivity"
+            android:label="Activity"
+            android:exported="true">
+        </activity>
 
     </application>
 

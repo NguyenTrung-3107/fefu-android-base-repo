@@ -21,7 +21,8 @@
         android:layout_below="@id/toolbar_register"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="ScrollViewCount">
+        tools:ignore="ScrollViewCount"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"

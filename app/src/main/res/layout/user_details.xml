@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/user_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_button"
+        app:title="@string/my_detail_toolbar_title"
+        app:menu="@menu/toolbar"/>
+
+    <View
+        android:id="@+id/user_activity_viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_toolbar">
+
+    </View>
+
+    <TextView
+        android:id="@+id/user_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_detail"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_toolbar" />
+
+    <TextView
+        android:id="@+id/user_detail_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_distance"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail" />
+
+    <TextView
+        android:id="@+id/user_detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_label"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_distance" />
+
+    <TextView
+        android:id="@+id/user_detail_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_duration"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_date" />
+
+    <TextView
+        android:id="@+id/user_detail_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_start"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_duration" />
+
+    <TextView
+        android:id="@+id/user_detail_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_start_time"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/user_detail_start"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_duration" />
+
+    <TextView
+        android:id="@+id/user_detail_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_divide"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/user_detail_start_time"
+        app:layout_constraintEnd_toStartOf="@id/user_detail_finish"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_duration" />
+
+    <TextView
+        android:id="@+id/user_detail_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_finish"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/user_detail_start_time"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_duration" />
+
+    <TextView
+        android:id="@+id/user_detail_finish_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_detail_finish_time"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/user_detail_finish"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_duration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_detail_comment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:boxBackgroundColor="@color/white"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_detail_start">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/my_activity_comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/my_detail_edit_comment" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

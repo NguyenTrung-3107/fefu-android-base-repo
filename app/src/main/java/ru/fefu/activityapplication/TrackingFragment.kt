@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
-import ru.fefu.activityapplication.databinding.TrackingAcitivityFragmentBinding
+import ru.fefu.activityapplication.databinding.TrackingActivityFragmentBinding
 
 class TrackingFragment : Fragment() {
-    private var _binding: TrackingAcitivityFragmentBinding? = null
+    private var _binding: TrackingActivityFragmentBinding? = null
 
     private val binding get() = _binding!!
     private lateinit var adapter: PagerAdapter
@@ -25,7 +25,7 @@ class TrackingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = TrackingAcitivityFragmentBinding.inflate(inflater, container, false)
+        _binding = TrackingActivityFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

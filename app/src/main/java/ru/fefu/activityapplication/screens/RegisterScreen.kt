@@ -1,9 +1,10 @@
-package ru.fefu.activityapplication
+package ru.fefu.activityapplication.screens
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import ru.fefu.activityapplication.R
 
 class RegisterScreen : AppCompatActivity(R.layout.register_screen_activity){
 

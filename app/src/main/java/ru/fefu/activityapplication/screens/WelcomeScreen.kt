@@ -1,9 +1,10 @@
-package ru.fefu.activityapplication
+package ru.fefu.activityapplication.screens
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import ru.fefu.activityapplication.R
 
 class WelcomeScreen : AppCompatActivity(R.layout.welcome_screen_activity) {
 

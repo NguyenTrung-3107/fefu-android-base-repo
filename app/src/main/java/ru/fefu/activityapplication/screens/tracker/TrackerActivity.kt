@@ -1,8 +1,13 @@
-package ru.fefu.activityapplication
+package ru.fefu.activityapplication.screens.tracker
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import ru.fefu.activityapplication.R
+import ru.fefu.activityapplication.screens.tracker.ActivityTab
+import ru.fefu.activityapplication.screens.tracker.NewActivityFragment
+import ru.fefu.activityapplication.screens.tracker.ProfileFragment
 import ru.fefu.activityapplication.databinding.ActivityLayoutBinding
 
 data class FragmentInfo (
@@ -16,14 +21,13 @@ class TrackerActivity : AppCompatActivity() {
 
     private val fragments = listOf<FragmentInfo>(
         FragmentInfo(R.id.action_tracker_activity, ActivityTab::newInstance, ActivityTab.tag),
-        FragmentInfo(R.id.action_profile_activity, ProfileFragment::newInstance, "profile"),
+        FragmentInfo(R.id.action_profile_activity, ProfileFragment::newInstance, ProfileFragment.tag)
     )
 
     private fun replaceFragment(buttonId: Int) {
         val active = supportFragmentManager.fragments.firstOrNull{!it.isHidden}
         val fragmentToShowInfo = fragments.first { it.buttonId == buttonId }
         val fragmentToShow = supportFragmentManager.findFragmentByTag(fragmentToShowInfo.tag)
-
         if (active == fragmentToShow) {
             return
         }
@@ -46,7 +50,6 @@ class TrackerActivity : AppCompatActivity() {
             }
         }
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLayoutBinding.inflate(layoutInflater)
@@ -67,11 +70,14 @@ class TrackerActivity : AppCompatActivity() {
             true
         }
     }
-
     override fun onBackPressed() {
         val active = supportFragmentManager.fragments.firstOrNull{!it.isHidden}!!
         val childManager = active.childFragmentManager
 
+        if (binding.bottomNavigationView.visibility == View.GONE) {
+            if (childManager.findFragmentByTag(NewActivityFragment.tag)?.isVisible == true)
+                binding.bottomNavigationView.visibility = View.VISIBLE
+        }
         if (supportFragmentManager.backStackEntryCount != 0) {
             supportFragmentManager.popBackStack()
         }

@@ -1,9 +1,9 @@
-package ru.fefu.activityapplication
+package ru.fefu.activityapplication.screens
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import ru.fefu.activityapplication.R
 
 class LoginScreen : AppCompatActivity(R.layout.login_screen_activity) {
 

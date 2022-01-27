@@ -1,43 +1,35 @@
-package ru.fefu.activityapplication
+package ru.fefu.activityapplication.screens.tracker
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.fefu.activityapplication.databinding.TabActivityFragmentBinding
+import ru.fefu.activityapplication.databinding.UserDetailsBinding
 
-class ActivityTab: Fragment() {
-    private var _binding: TabActivityFragmentBinding? = null
-
+class UserInfo : Fragment() {
+    private var _binding: UserDetailsBinding? = null
     private val binding get() = _binding!!
-
     companion object {
-        fun newInstance(): ActivityTab {
-            return ActivityTab()
+        fun newInstance(): UserInfo {
+            return UserInfo()
         }
-        const val tag = "tabs"
+        const val tag = "user_info"
     }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = TabActivityFragmentBinding.inflate(inflater, container, false)
+    ): View? {
+        _binding = UserDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (savedInstanceState == null) {
-            childFragmentManager.beginTransaction().apply {
-                add(R.id.tab_fragment_container, TrackerActivityFragment.newInstance())
-                commit()
-            }
+        binding.userDetailToolbar.setNavigationOnClickListener {
+            activity?.onBackPressed()
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

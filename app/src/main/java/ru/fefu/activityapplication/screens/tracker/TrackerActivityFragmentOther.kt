@@ -11,6 +11,7 @@ import ru.fefu.activityapplication.models.UserData
 import ru.fefu.activityapplication.R
 import ru.fefu.activityapplication.adapters.AdapterActivityList
 import ru.fefu.activityapplication.databinding.OtherTrackerActivityFragmentBinding
+import ru.fefu.activityapplication.models.DataOfActivity
 import ru.fefu.activityapplication.models.DateTimeData
 import java.time.LocalDateTime
 
@@ -76,10 +77,11 @@ class TrackerActivityFragmentOther : Fragment(R.layout.other_tracker_activity_fr
             val manager = activity?.supportFragmentManager?.findFragmentByTag(ActivityTab.tag)?.childFragmentManager
             manager?.beginTransaction()?.apply {
                 manager.fragments.forEach(::hide)
+
                 add (
                     R.id.tab_fragment_container,
-                    MyInfo.newInstance(),
-                    MyInfo.tag,
+                    UserInfo.newInstance(),
+                    UserInfo.tag,
                 )
                 addToBackStack(null)
                 commit()
